@@ -1,3 +1,19 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">Ember At.js</h2>
 
-{{outlet}}
+<h3>@ tagging</h3>
+{{atjs-textarea settings=atSettings value=atValue}}
+<hr>
+{{#each atSettings as |setting|}}
+  {{setting.at}}: {{setting.data}}<br>
+{{/each}}
+<button {{action 'changeAtSettings'}}>Change settings</button>
+
+<h3>emoji</h3>
+{{atjs-textarea settings=emojiSettings}}
+<hr>
+{{#each emojiSettings as |setting|}}
+  {{#each setting.data as |emojis|}}
+    {{emojis.name}}, 
+  {{/each}}
+{{/each}}
+<button {{action 'changeEmojiSettings'}}>Change settings</button>
