@@ -9,7 +9,7 @@
 <button {{action 'changeAtSettings'}}>Change settings</button>
 
 <h3>emoji</h3>
-{{atjs-textarea settings=emojiSettings}}
+{{atjs-textarea settings=emojiSettings value=emojiValue}}
 <hr>
 {{#each emojiSettings as |setting|}}
   {{#each setting.data as |emojis|}}

@@ -6,19 +6,14 @@ moduleForComponent('atjs-textarea', 'Integration | Component | atjs textarea', {
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
   this.render(hbs`{{atjs-textarea}}`);
-
   assert.equal(this.$().text().trim(), '');
+});
 
-  // Template block usage:
-  this.render(hbs`
-    {{#atjs-textarea}}
-      template block text
-    {{/atjs-textarea}}
-  `);
+test('it renders values', function(assert) {
+  const html = '<a href>lorem ipsum</a>';
+  this.set('value', html);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  this.render(hbs`{{atjs-textarea value=value}}`);
+  assert.equal(this.$().text().trim(), 'lorem ipsum');
 });
