@@ -12,14 +12,7 @@ Different settings can be found at the [At.js documentation](https://github.com/
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
-
-## Running
-
-* `ember server`
-* Visit your app at http://localhost:4200.
+`ember install ember-at-js`
 
 ## Running Tests
 
