@@ -6,6 +6,8 @@
 {{#each atSettings as |setting|}}
   {{setting.at}}: {{setting.data}}<br>
 {{/each}}
+<hr>
+{{atValue}}
 <button {{action 'changeAtSettings'}}>Change settings</button>
 
 <h3>emoji</h3>

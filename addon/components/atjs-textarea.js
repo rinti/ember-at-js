@@ -5,9 +5,15 @@ const { merge, observer } = Ember;
 export default Ember.Component.extend({
   layout,
   settings: [{}],
+  value: null,
+  tagName: 'div',
   didInsertElement() {
     this.$().attr('contenteditable', 'true');
     this._setupTextarea();
+    this.set('internalValue', this.get('value'));
+  },
+  keyUp(event) {
+    this.set('value', this.$().html());
   },
   _settingsListener: observer('settings', function() { this._setupTextarea() }),
   _setupTextarea() {
@@ -16,5 +22,8 @@ export default Ember.Component.extend({
       let settings = merge(defaults, this.get('settings')[i]);
       this.$().atwho(settings);
     }
+  },
+  destroy() {
+    this.$().atwho('destroy');
   }
 });
