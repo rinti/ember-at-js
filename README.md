@@ -16,6 +16,12 @@ Different settings can be found at the [At.js documentation](https://github.com/
 
 `ember install ember-at-js`
 
+This addon do not automatically import the default styles for you. If you want the At.js default styles add:
+
+`app.import(app.bowerDirectory + '/At.js/dist/css/jquery.atwho.css');`
+
+to your `ember-cli-build.js`
+
 ## Running Tests
 
 * `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
