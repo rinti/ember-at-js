@@ -1,6 +1,14 @@
-# Ember-atjs
+# ember-at-js
 
-This README outlines the details of collaborating on this Ember addon.
+The component takes two arguments, `settings` and `value`.
+
+Example:
+
+```hbs
+  {{at-js settings=mySettings value=model.body}}
+```
+
+Different settings can be found at the [At.js documentation](https://github.com/ichord/At.js/wiki/Base-Document#settings).
 
 ## Installation
 
