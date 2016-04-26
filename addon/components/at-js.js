@@ -21,6 +21,7 @@ export default Ember.Component.extend({
   _settingsListener: observer('settings', function() { this._setupTextarea() }),
   _setupTextarea() {
     const defaults = {at: '@'};
+
     for(var i=0; i < this.get('settings').length; i++) {
       let settings = merge(defaults, this.get('settings')[i]);
       this.$().atwho(settings);

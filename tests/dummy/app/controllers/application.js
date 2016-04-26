@@ -11,6 +11,7 @@ export default Ember.Controller.extend({
     data: ['test', 'lorem', 'ipsum'],
     insertTpl: "<a href>#${name}</a>"
   }],
+
   emojiValue: "<img src='http://a248.e.akamai.net/assets.github.com/images/icons/emoji/girl.png' height='20' width='20'/>",
   emojiSettings: [{
     at: ':',
@@ -22,6 +23,15 @@ export default Ember.Controller.extend({
       {id: 3, name: 'girl'}
     ]
   }],
+
+  asyncSettings: [{
+    at: ':',
+    insertTpl: "<a href>@${name}</a>",
+    data: [
+    ]
+  }],
+  asyncValue: '',
+
   actions: {
     changeAtSettings() {
       var newSettings = [{

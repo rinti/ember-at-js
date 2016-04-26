@@ -18,4 +18,11 @@
     {{emojis.name}}, 
   {{/each}}
 {{/each}}
-<button {{action 'changeEmojiSettings'}}>Change settings</button>
+
+<h3>async</h3>
+{{at-js settings=asyncSettings value=asyncValue}}
+<hr>
+{{#each asyncSettings as |setting|}}
+  {{setting.at}}: {{setting.data}}<br>
+{{/each}}
+{{asyncValue}}
