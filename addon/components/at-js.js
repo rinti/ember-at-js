@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import layout from '../templates/components/atjs-textarea';
+import layout from '../templates/components/at-js';
 const { merge, observer } = Ember;
 
 export default Ember.Component.extend({

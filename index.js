@@ -2,7 +2,7 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-atjs',
+  name: 'ember-at-js',
   included: function(app) {
     this._super.included(app);
 

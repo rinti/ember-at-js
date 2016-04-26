@@ -1,7 +1,7 @@
 <h2 id="title">Ember At.js</h2>
 
 <h3>@ tagging</h3>
-{{atjs-textarea settings=atSettings value=atValue}}
+{{at-js settings=atSettings value=atValue}}
 <hr>
 {{#each atSettings as |setting|}}
   {{setting.at}}: {{setting.data}}<br>
@@ -11,7 +11,7 @@
 <button {{action 'changeAtSettings'}}>Change settings</button>
 
 <h3>emoji</h3>
-{{atjs-textarea settings=emojiSettings value=emojiValue}}
+{{at-js settings=emojiSettings value=emojiValue}}
 <hr>
 {{#each emojiSettings as |setting|}}
   {{#each setting.data as |emojis|}}

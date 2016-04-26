@@ -6,7 +6,7 @@ moduleForComponent('atjs-textarea', 'Integration | Component | atjs textarea', {
 });
 
 test('it renders', function(assert) {
-  this.render(hbs`{{atjs-textarea}}`);
+  this.render(hbs`{{at-js}}`);
   assert.equal(this.$().text().trim(), '');
 });
 
@@ -14,6 +14,6 @@ test('it renders values', function(assert) {
   const html = '<a href>lorem ipsum</a>';
   this.set('value', html);
 
-  this.render(hbs`{{atjs-textarea value=value}}`);
+  this.render(hbs`{{at-js value=value}}`);
   assert.equal(this.$().text().trim(), 'lorem ipsum');
 });
