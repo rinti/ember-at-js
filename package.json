@@ -40,7 +40,7 @@
     "phantomjs": "^2.1.7"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon", "at.js", "mention"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.5",
