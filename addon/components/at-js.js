@@ -7,10 +7,13 @@ export default Ember.Component.extend({
   settings: [{}],
   value: null,
   tagName: 'div',
+  init() {
+    this._super(...arguments);
+    this.set('internalValue', this.get('value'));
+  },
   didInsertElement() {
     this.$().attr('contenteditable', 'true');
     this._setupTextarea();
-    this.set('internalValue', this.get('value'));
   },
   keyUp(event) {
     this.set('value', this.$().html());
