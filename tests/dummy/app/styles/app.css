@@ -1,0 +1,10 @@
+.box {
+  max-width: 700px;
+  border: 1px solid #f1f1f1;
+  padding: 10px;
+  overflow: hidden;
+}
+.box .at-js {
+  border: 1px solid #ccc;
+  padding: 5px;
+}

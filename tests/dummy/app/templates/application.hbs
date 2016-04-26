@@ -1,28 +1,38 @@
 <h2 id="title">Ember At.js</h2>
 
-<h3>@ tagging</h3>
-{{at-js settings=atSettings value=atValue}}
-<hr>
-{{#each atSettings as |setting|}}
-  {{setting.at}}: {{setting.data}}<br>
-{{/each}}
-<hr>
-{{atValue}}
-<button {{action 'changeAtSettings'}}>Change settings</button>
+<h3>More than one setting: both @ and #</h3>
+<div class="box">
+  {{at-js settings=atSettings value=atValue}}
+  <p>
+    Settings: <br>
+    {{#each atSettings as |setting|}}
+      {{setting.at}}: {{setting.data}}<br>
+    {{/each}}
+  </p>
+  <p>
+    Current value:<br>
+    {{atValue}}
+  </p>
+  <button {{action 'changeAtSettings'}}>Change settings</button>
+</div>
 
 <h3>emoji</h3>
-{{at-js settings=emojiSettings value=emojiValue}}
-<hr>
-{{#each emojiSettings as |setting|}}
-  {{#each setting.data as |emojis|}}
-    {{emojis.name}}, 
-  {{/each}}
-{{/each}}
+<div class="box">
+  {{at-js settings=emojiSettings value=emojiValue}}
+  <p>
+    Current value:<br>
+    {{emojiValue}}
+  </p>
+</div>
 
 <h3>async</h3>
-{{at-js settings=asyncSettings value=asyncValue}}
-<hr>
-{{#each asyncSettings as |setting|}}
-  {{setting.at}}: {{setting.data}}<br>
-{{/each}}
-{{asyncValue}}
+<div class="box">
+  <p>Those settings will come after 5 seconds</p>
+  {{at-js settings=asyncSettings value=asyncValue}}
+  <p>
+    Settings:<br>
+    {{#each asyncSettings as |setting|}}
+      {{setting.at}}: {{setting.data}}<br>
+    {{/each}}
+  </p>
+</div>

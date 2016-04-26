@@ -6,6 +6,7 @@ export default Ember.Component.extend({
   layout,
   settings: [{}],
   value: null,
+  classNames: ['at-js'],
   tagName: 'div',
   init() {
     this._super(...arguments);

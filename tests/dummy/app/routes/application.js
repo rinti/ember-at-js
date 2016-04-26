@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   setupController(controller) {
     this._super(...arguments);
-    new Ember.RSVP.Promise(function(resolve) {
+    new Ember.RSVP.Promise(function() {
       setTimeout(function() {
         const settings = [{
           at: '@',
