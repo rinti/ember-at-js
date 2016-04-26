@@ -1,5 +1,7 @@
 # ember-at-js
 
+Demo available here: [http://ember-at-js.rinti.se/](http://ember-at-js.rinti.se/)
+
 The component takes two arguments, `settings` and `value`.
 
 Example:
