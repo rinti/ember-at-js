@@ -9,7 +9,12 @@ export default Ember.Controller.extend({
   {
     at: '#',
     data: ['test', 'lorem', 'ipsum'],
-    insertTpl: "<a href>#${name}</a>"
+    insertTpl: "<a href>#${name}</a>",
+    callbacks: {
+      beforeInsert(value, li) {
+        alert('i am a before insert callback ' + value);
+      }
+    }
   }],
 
   emojiValue: "<img src='http://a248.e.akamai.net/assets.github.com/images/icons/emoji/girl.png' height='20' width='20'/>",
