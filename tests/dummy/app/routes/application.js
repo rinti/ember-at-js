@@ -1,9 +1,10 @@
-import Ember from 'ember';
+import { Promise } from 'rsvp';
+import Route from '@ember/routing/route';
 
-export default Ember.Route.extend({
+export default Route.extend({
   setupController(controller) {
     this._super(...arguments);
-    new Ember.RSVP.Promise(function() {
+    new Promise(function() {
       setTimeout(function() {
         const settings = [{
           at: '@',
