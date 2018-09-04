@@ -1,10 +1,13 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { merge } from '@ember/polyfills';
+import { computed, observer } from '@ember/object';
 import layout from '../templates/components/at-js';
-const { merge, observer } = Ember;
 
-export default Ember.Component.extend({
+export default Component.extend({
   layout,
-  settings: [{}],
+  settings: computed(function() {
+    return [{}]
+  }),
   value: null,
   classNames: ['at-js'],
   tagName: 'div',
@@ -16,7 +19,7 @@ export default Ember.Component.extend({
     this.$().attr('contenteditable', 'true');
     this._setupTextarea();
   },
-  keyUp(event) {
+  keyUp() {
     this.set('value', this.$().html());
   },
   _settingsListener: observer('settings', function() { this._setupTextarea() }),
